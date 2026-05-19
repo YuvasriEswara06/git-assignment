@@ -1,0 +1,3 @@
+This is going to be my second feature.
+
+This is minor fix for checking release-v1.0 branch.
