@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReelMind - Interactive App Preview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">🧠 ReelMind</div>
+        <nav class="sidebar-menu">
+            <a href="#" class="menu-item active">📥 All Saved Reels <span class="badge-count">12</span></a>
+            <a href="#" class="menu-item">🍳 Recipes & Food</a>
+            <a href="#" class="menu-item">🏋️ Gym & Workouts</a>
+            <a href="#" class="menu-item">💻 Coding & Tech</a>
+            <a href="#" class="menu-item">✈️ Travel Inspo</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-home-btn">← Back to Landing Page</a>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div>
+                <h2>Your Knowledge Boards</h2>
+                <p class="subtext">Turn your temporary bookmarks into long-term actionable insights.</p>
+            </div>
+            <div class="dashboard-actions">
+                <button class="action-btn active">All Platforms</button>
+                <button class="action-btn">Unread Only</button>
+            </div>
+        </header>
+
+        <section class="boards-grid">
+            
+            <article class="reel-card">
+                <div class="video-placeholder">
+                    <span class="play-icon">▶</span>
+                    <span class="duration-tag">0:45</span>
+                </div>
+                <div class="card-content">
+                    <div class="tag-row">
+                        <span class="card-tag tag-food">#Cooking</span>
+                        <span class="platform-tag">Instagram</span>
+                    </div>
+                    <h4>15-Minute Garlic Chili Noodles</h4>
+                    <p class="card-description">Tried making this on Tuesday! Add extra sesame oil and green onions next time for crunch.</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Marked as Done / Cooked
+                    </label>
+                </div>
+            </article>
+
+            <article class="reel-card">
+                <div class="video-placeholder gym-bg">
+                    <span class="play-icon">▶</span>
+                    <span class="duration-tag">1:12</span>
+                </div>
+                <div class="card-content">
+                    <div class="tag-row">
+                        <span class="card-tag tag-gym">#Fitness</span>
+                        <span class="platform-tag">TikTok</span>
+                    </div>
+                    <h4>Perfect Form: Deadlift Setup</h4>
+                    <p class="card-description">Crucial breakdown of hip hinge positioning. Keep bar path close to shins to avoid back strain.</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Marked as Done / Exercised
+                    </label>
+                </div>
+            </article>
+
+            <article class="reel-card">
+                <div class="video-placeholder code-bg">
+                    <span class="play-icon">▶</span>
+                    <span class="duration-tag">0:58</span>
+                </div>
+                <div class="card-content">
+                    <div class="tag-row">
+                        <span class="card-tag tag-tech">#Coding</span>
+                        <span class="platform-tag">YouTube Short</span>
+                    </div>
+                    <h4>CSS Flexbox vs Grid Explained</h4>
+                    <p class="card-description">Use Flexbox for single dimensional alignments (like navigation bars) and Grid for multi-row complex layouts.</p>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Marked as Finished / Reviewed
+                    </label>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
