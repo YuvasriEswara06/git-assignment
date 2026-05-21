@@ -1,0 +1,429 @@
+/* ==========================================================================
+   1. GLOBAL RESETS & STYLING ARCHITECTURE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. WEBPAGE 1: LANDING PAGE COMPONENTS
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #4f46e5;
+}
+
+.hero-section {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+.waitlist-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: #4f46e5;
+}
+
+.form-btn {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    padding: 16px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-btn:hover {
+    background-color: #4338ca;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.feature-card ul {
+    list-style-position: inside;
+}
+
+.feature-card li {
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.problem { border-top: 5px solid #ef4444; }
+.solution { border-top: 5px solid #10b981; }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   3. WEBPAGE 2: ADVANCED APP PREVIEW DASHBOARD LAYOUT
+   ========================================================================== */
+.dashboard-body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+}
+
+/* Fixed Application Navigation Sidebar Component */
+.sidebar {
+    width: 260px;
+    background-color: #0f172a; /* Sleek Slate-900 Dark Mode */
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #818cf8;
+    margin-bottom: 40px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.badge-count {
+    background-color: #4f46e5;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.sidebar-footer {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+}
+
+.back-home-btn {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.back-home-btn:hover {
+    color: #ffffff;
+}
+
+/* Core Dashboard Content Display Workspace */
+.dashboard-main {
+    margin-left: 260px; /* Counter-offset spacing for fixed sidebar positioning */
+    flex: 1;
+    padding: 40px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    color: #0f172a;
+    font-size: 1.8rem;
+}
+
+.dashboard-header .subtext {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #475569;
+}
+
+.action-btn.active {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border-color: #4f46e5;
+}
+
+/* ==========================================================================
+   4. COMPONENT ARCHITECTURE: REEL CARDS SYSTEM (CSS GRID)
+   ========================================================================== */
+.boards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.reel-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+}
+
+/* Media Mock Container Box */
+.video-placeholder {
+    height: 180px;
+    background: linear-gradient(135deg, #a5b4fc, #818cf8); /* Custom Gradient Background Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+}
+
+/* Varied Mock Card Thumbnail Assets Background Styles */
+.gym-bg { background: linear-gradient(135deg, #fca5a5, #f87171); }
+.code-bg { background: linear-gradient(135deg, #6ee7b7, #34d399); }
+
+.play-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    background: rgba(0,0,0,0.2);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.duration-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tag-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.tag-food { background-color: #e0e7ff; color: #4338ca; }
+.tag-gym { background-color: #fee2e2; color: #b91c1c; }
+.tag-tech { background-color: #d1fae5; color: #065f46; }
+
+.platform-tag {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.card-content h4 {
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Standard Checkbox UI Styling Override */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #cbd5e1;
+    border-radius: 4px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #94a3b8;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #10b981;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
